@@ -6,7 +6,7 @@ RSpec.describe "Api::V1::Forecasts", type: :request do
     it "returns http success" do
       get "/api/v1/forecast?location=denver,co"
       expect(response).to have_http_status(:success)
-      expect(response.body.class).to eq(String)
+      expect(response.body.class).to eq(Hash)
     end
   end
 
